@@ -1,5 +1,4 @@
-
-// Smooth scrolling
+// Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -10,45 +9,39 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-
+// Modal Elements
 const modal = document.getElementById('modal');
 const modalImg = document.getElementById('modal-img');
 const modalCaption = document.getElementById('modal-caption');
 const modalDescription = document.getElementById('modal-description');
 
+// Click event for projects
 document.querySelectorAll('.project').forEach(item => {
     item.addEventListener('click', event => {
-        const title = item.getAttribute('data-title');
-        const image = item.getAttribute('data-image');
-        const description = item.getAttribute('data-description');
+        const projectId = item.getAttribute('id'); // Ottieni l'id del progetto
+        const projectElement = document.getElementById(projectId); // Ottieni l'elemento del progetto
 
-        modalImg.src = image;
-        modalCaption.textContent = title;
-        modalDescription.textContent = description;
+        // Scorri verso il progetto
+        projectElement.scrollIntoView({
+            behavior: 'smooth'
+        });
 
-        modal.style.display = 'block';
+        // Opzionale: se desideri mostrare il modal per il progetto cliccato
+         modalImg.src = projectElement.getAttribute('data-image');
+         modalCaption.textContent = projectElement.getAttribute('data-title');
+         modalDescription.textContent = projectElement.getAttribute('data-description');
+         modal.style.display = 'block';
     });
 });
 
-// Funzione per chiudere il modal
-document.querySelector('.close').addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-// Chiudi il modal quando si clicca all'esterno
+// Close modal when clicking outside
 window.onclick = function(event) {
     if (event.target === modal) {
         modal.style.display = "none";
     }
-}
+};
 
-// Smooth scrolling
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Close modal with the close button
+document.querySelector('.close').addEventListener('click', () => {
+    modal.style.display = 'none';
 });
