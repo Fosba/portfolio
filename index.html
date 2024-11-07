@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript">
-  function showDate() {
-    var d = new Date();
-    var curr_hour = d.getHours();
-    var curr_min = d.getMinutes();
-    var curr_date = d.getDate();
-    var curr_month = d.getMonth() + 1; //months are zero based
-    var curr_year = d.getFullYear();
-    document.write(curr_hour + ":" + curr_min + "&nbsp;&nbsp;&nbsp;&nbsp;" + curr_date + "-" + curr_month + "-" + curr_year);
-  }
+        function showDate() {
+            var d = new Date();
+            var curr_hour = d.getHours();
+            var curr_min = d.getMinutes();
+            var curr_date = d.getDate();
+            var curr_month = d.getMonth() + 1; // months are zero based
+            var curr_year = d.getFullYear();
+            document.write(curr_hour + ":" + curr_min + "&nbsp;&nbsp;&nbsp;&nbsp;" + curr_date + "-" + curr_month + "-" + curr_year);
+        }
     </script>
-  
 </head>
 <body>
     <script type="text/javascript">showDate();</script>
@@ -24,123 +23,123 @@
         <h1>Fosba</h1>
         <nav>
             <ul>
-                <li><a href="#about">Chi Sono</a></li>
-                <li><a href="#projects">Progetti</a></li>
-                <li><a href="#contact">Contatti</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section id="about">
-        <h2>Chi Sono</h2>
+        <h2>About Me</h2>
         <p>A young Italian developer without a lot of work experience but really motivated to learn new things.</p>
     </section>
 
-        <section id="projects">
-        <h2>Progetti</h2>
+    <section id="projects">
+        <h2>Projects</h2>
         <div class="project" id="project1"
-        data-title="Generatore QR" 
-        data-description="Funzionalità: Stampa Testo in Stile Digitale: Utilizza una funzione typingPrint che simula una digitazione lenta per migliorare l'interazione con l'utente.
+        data-title="QR Generator" 
+        data-description="Functionality: Print Text in Digital Style: It uses a typingPrint function that simulates slow typing to improve user interaction.
 
-        Gestione delle Credenziali: Ha un sistema di autenticazione per un pannello di amministrazione, consentendo solo agli utenti con le giuste credenziali di accedere alle impostazioni avanzate del programma.
+        Credential Management: It has an authentication system for an admin panel, allowing only users with the right credentials to access the program's advanced settings.
         
-        Lista di Monumenti: Il programma contiene un elenco predefinito di monumenti, ognuno dei quali ha un nome e un link associato. Gli utenti possono selezionare un monumento per generare il codice QR corrispondente.
+        Monument List: The program contains a predefined list of monuments, each of which has a name and associated link. Users can select a monument to generate the corresponding QR code.
         
-        Impostazioni del Colore: Gli utenti possono scegliere tra diversi colori per il testo e il codice QR. I colori sono predefiniti e l'utente può iterare tra le opzioni disponibili.
+        Color Settings: Users can choose from different colors for the text and QR code. The colors are predefined, and the user can iterate through the available options.
         
-        Generazione di Codici QR: Utilizza la libreria qrcode per generare effettivamente i codici QR basati sul link del monumento selezionato. I codici QR vengono salvati come file PNG e aperti per visualizzazione.
+        QR Code Generation: Uses the qrcode library to actually generate QR codes based on the link of the selected monument. QR codes are saved as PNG files and opened for viewing.
         
-        Feedback e Interazione: Il programma fornisce feedback all'utente, come messaggi di successo o di errore, per garantire una buona esperienza utente." 
+        Feedback and Interaction: The program provides feedback to the user, such as success or error messages, to ensure a good user experience." 
         data-image="qrcode.jpg">
-            <h3>Generatore codici QR</h3>
-            <p>Un generatore di QR Code</p>
-            <a href="https://pastecode.io/s/n611tch7" target="_blank">Link al codice sorgente</a>
+            <h3>QR Code Generator</h3>
+            <p>A QR Code generator</p>
+            <a href="https://pastecode.io/s/n611tch7" target="_blank">Link to source code</a>
         </div>
 
         <div class="project" id="project2"
         data-title="Custom CMD" 
-        data-description="Descrizione del Programma: 
-        Il programma funge da interfaccia della riga di comando (CLI) personalizzata, simile al Prompt dei comandi (cmd) di Windows, ma arricchita da funzionalità specifiche per rendere l'interazione più user-friendly e utile. Gli utenti possono invocare diversi comandi per svolgere varie operazioni. Ecco un breve riepilogo delle funzionalità disponibili tramite i comandi:
+        data-description="Program Description: 
+        The program acts as a custom command line interface (CLI), similar to the Windows Command Prompt (cmd), but enriched with specific features to make interaction more user-friendly and useful. Users can invoke different commands to perform various operations. Here's a brief summary of the available features through the commands:
         
-        !new: Consente di creare un nuovo file e di rinominarlo. Questa funzione aiuta gli utenti a iniziare rapidamente a lavorare su file senza dover navigare attraverso un'interfaccia grafica.
+        !new: Allows for the creation of a new file and renaming it. This feature helps users quickly start working on files without navigating through a graphical interface.
         
-        !file: Permette di aprire un file specificato dall'utente. Richiede l'inserimento della directory del file da aprire, il che rende la funzione utile per visualizzare documenti già esistenti.
+        !file: Allows opening a user-specified file. It requires entering the file's directory to open, which makes the function useful for viewing existing documents.
         
-        !ip: Visualizza l'indirizzo IP del client. Questo comando fornisce informazioni utili sulla connessione di rete attuale dell'utente.
+        !ip: Displays the client’s IP address. This command provides useful information about the current network connection of the user.
         
-        !feedback: Consente agli utenti di lasciare feedback sul programma. Questo è utile per ricevere suggerimenti e miglioramenti da parte degli utenti.
+        !feedback: Allows users to leave feedback about the program. This is useful for receiving suggestions and improvements from users.
         
-        !ai: Progettato per utilizzare un'intelligenza artificiale nel cmd, anche se il programma attualmente non è implementato correttamente. Potrebbe essere una funzione da migliorare in futuro.
+        !ai: Designed to use artificial intelligence in the cmd, even though the program is currently not implemented correctly. It could be an area to improve in the future.
         
-        !meteo: Mostra il meteo di una città specificata. Questa funzione offre agli utenti la possibilità di controllare le condizioni meteorologiche senza dover utilizzare un browser.
+        !weather: Shows the weather for a specified city. This feature allows users to check weather conditions without using a browser.
         
-        !calcolatrice: Fornisce una calcolatrice per effettuare vari tipi di calcoli. Aiuta gli utenti a svolgere operazioni matematiche direttamente dalla CLI.
+        !calculator: Provides a calculator for performing various types of calculations. It helps users perform mathematical operations directly from the CLI.
         
-        !orario: Permette di ottenere l'orario locale attuale. Questa funzione è utile per gli utenti che necessitano di informazioni temporali durante l'uso della riga di comando." 
+        !time: Allows getting the current local time. This function is useful for users who need time information during command line usage." 
         data-image="cmd.jpg">
         <h3>Custom CMD</h3>
-        <p>Una custom del cmd.</p>
-        <p>Per il codice sorgente di questo progetto contattare in privato</p>
+        <p>A custom cmd.</p>
+        <p>For the source code of this project, please contact privately.</p>
         </div>
 
         <div class="project" id="project3"
         data-title="Password Generator" 
-        data-description="Interfaccia di Benvenuto: All'avvio, il programma mostra un messaggio di benvenuto in ASCII art e attende 3 secondi prima di pulire lo schermo. Richiesta Dati all'Utente: L'utente inserisce la lunghezza della password. Se l'input è 0 o non è valido, il programma richiede nuovamente l'input. Poi chiede quanti numeri e quante lettere includere, 
-        assicurandosi che la somma corrisponda esattamente alla lunghezza. Controllo degli Input: Se i requisiti non sono soddisfatti, il programma mostra un errore e richiede di reinserire i dati. Generazione della Password: Una volta verificati i dati, il programma genera lettere e numeri casuali in base alle specifiche dell'utente. 
-        Mescolamento della Password: La password preliminare viene mescolata casualmente per evitare un ordine prevedibile. 
-        Simulazione di Generazione: Prima di mostrare la password, il programma simula un'attesa. 
-        Visualizzazione della Password: Infine, il programma mostra la password generata." 
-        data-image="passwordgenerator.jpg"> <!-- Cambia qui! -->
+        data-description="Welcome Interface: At startup, the program shows a welcome message in ASCII art and waits for 3 seconds before clearing the screen. User Data Request: The user enters the password length. If the input is 0 or invalid, the program requests input again. Then it asks how many numbers and how many letters to include,
+        ensuring that the sum exactly matches the length. Input Check: If the requirements are not met, the program shows an error and requests data to be re-entered. Password Generation: Once the data is verified, the program generates random letters and numbers based on the user's specifications.
+        Password Shuffling: The preliminary password is randomly shuffled to avoid a predictable order.
+        Generation Simulation: Before displaying the password, the program simulates a wait.
+        Password Display: Finally, the program shows the generated password." 
+        data-image="passwordgenerator.jpg"> 
         <h3>Password Generator</h3>
-        <p>Generatore di password.</p>
-        <a href="https://pastecode.io/s/p91cmno3" target="_blank">Link al codice sorgente</a>
+        <p>Password generator.</p>
+        <a href="https://pastecode.io/s/p91cmno3" target="_blank">Link to source code</a>
         </div>
 
         <div class="project" id="project4"
         data-title="Telegram Bot" 
-        data-description="Descrizione del Programma: 
-        Questo script Python utilizza la libreria python-telegram-bot per creare un bot di Telegram. Quando un utente invia il comando /start, il bot risponde con un messaggio di benvenuto e una tastiera inline con vari pulsanti. 
-        I pulsanti consentono agli utenti di accedere a informazioni private, collegamenti ai social media e uno shop. Il bot gestisce gli eventi di callback 
-        per rispondere agli input degli utenti tramite pulsanti, invia messaggi e foto, e gestisce l'eliminazione dei messaggi precedenti per mantenere la conversazione pulita." 
+        data-description="Program Description: 
+        This Python script uses the python-telegram-bot library to create a Telegram bot. When a user sends the /start command, the bot responds with a welcome message and an inline keyboard with various buttons. 
+        The buttons allow users to access private information, links to social media, and a shop. The bot handles callback events 
+        to respond to user inputs via buttons, sends messages and photos, and manages the deletion of previous messages to keep the conversation clean." 
         data-image="bot_tg.jpg">
             <h3>Redirect Telegram Bot</h3>
-            <p>Un bot redirect per telegram.</p>
-            <a href="https://pastecode.io/s/d0o7g4yn" target="_blank">Link al codice sorgente</a>
+            <p>A redirect bot for Telegram.</p>
+            <a href="https://pastecode.io/s/d0o7g4yn" target="_blank">Link to source code</a>
         </div>
         <div class="project" id="project5"
-        data-title="Telegram business o redirect Bot" 
-        data-description="Descrizione del Programma: Questo script Python utilizza la libreria python-telegram-bot per creare un bot di Telegram. 
-        Alla ricezione del comando /start, il bot accoglie l'utente con un messaggio di benvenuto 
-        e una tastiera inline contenente pulsanti che reindirizzano a canali Telegram e forniscono ulteriori informazioni.
-        Quando l'utente preme il pulsante Info, il bot invia un messaggio con informazioni dettagliate, 
-        accompagnato da un'altra tastiera inline che offre ulteriori opzioni, come collegamenti diretti per iniziare immediatamente o richiedere supporto. Il bot gestisce 
-        anche l'azione di indietro per eliminare i messaggi inviati in precedenza, mantenendo la conversazione in modo ordinato." 
+        data-title="Telegram Business or Redirect Bot" 
+        data-description="Program Description: This Python script uses the python-telegram-bot library to create a Telegram bot. 
+        Upon receiving the /start command, the bot welcomes the user with a message and an inline keyboard containing buttons that redirect to Telegram channels and provide further information.
+        When the user presses the Info button, the bot sends a message with detailed information, 
+        accompanied by another inline keyboard offering further options, such as direct links to start immediately or request support. The bot also handles 
+        the back action to delete previously sent messages, maintaining an organized conversation." 
         data-image="shopbot.jpg">
-            <h3>Telegram business o redirect Bot</h3>
-            <p>Un business bot per telegram.</p>
-            <a href="https://pastecode.io/s/7d4jr69v" target="_blank">Link al codice sorgente</a>
+            <h3>Telegram Business or Redirect Bot</h3>
+            <p>A business bot for Telegram.</p>
+            <a href="https://pastecode.io/s/7d4jr69v" target="_blank">Link to source code</a>
         </div>
-        <!-- Modale -->
+        
+        <!-- Modal -->
         <div id="modal" class="modal">
             <span class="close"></span>
-            <img class="modal-content" id="modal-img" >
+            <img class="modal-content" id="modal-img">
             <div id="modal-caption"></div>
             <div id="modal-description"></div>
         </div>
         <div class="modal" id="myModal" onclick="closeModal()">
-        <div class="modal-content" onclick="event.stopPropagation();">
-        <span class="close" onclick="closeModal()">X</span>
-        </div>
+            <div class="modal-content" onclick="event.stopPropagation();">
+                <span class="close" onclick="closeModal()">X</span>
+            </div>
         </div>
 
     <section id="contact">
-        <h2>Contatti</h2>
+        <h2>Contact</h2>
         <p>Email: fosbafnbr@gmail.com</p>
-        <p>non cliccare pls: <a class="special-link" href="video.html">no bro</a></p>
+        <p>Don't click please: <a class="special-link" href="video.html">no bro</a></p>
     </section>
 
     <footer>
         <p>&copy; 2024 Fosba Corporation</p>
     </footer>
-    <script src="script.js"></script> <!-- Corretto -->
+    <script src="script.js"></script> 
 </body>
 </html>
