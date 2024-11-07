@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop screaming</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Stop Screaming</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <div style="text-align: center;">
-        <video width="1400" height="880" > <!--controls autoplay muted roba da mettere con video vero-->
-            <source src="IMG_0586.mp4" type="video/mp4" > <!-- Sostituisci con il tuo file video -->
-            Il tuo browser non supporta il tag video.
-        </video>
-        <br>
-        <!--<button onclick="window.location.href='index.html'">Torna alla Home</button>  Ritorna alla pagina principale -->
+    <div class="video-container">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DgyWS1_WFZU?autoplay=1&loop=1&playlist=DgyWS1_WFZU&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+    <!--<button onclick="window.location.href='index.html'">Torna alla Home</button>  Ritorna alla pagina principale -->
 </body>
 </html>
