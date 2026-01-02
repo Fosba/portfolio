@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Fosba | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="opacity: 0;">
+    <!-- <div id="dateTimeDisplay" style="position:fixed; top:30px; left:5%; font-family:monospace; color:var(--accent); font-size:12px;"></div> -->
+
+    <div class="grain"></div>
+    <header>
+        <h1>FOSBA<br>CREATIVE<br>DEV.</h1>
+        <div class="header-description">
+            <p>A young Italian developer motivated to bridge the gap between code and aesthetic elegance.</p>
+        </div>
+        <div class="social-links">
+            <a href="https://instagram.com/fvckfil" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://t.me/GuantiNeriBalaclava" target="_blank" class="social-icon">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="https://github.com/Fosba" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://discordapp.com/users/indimenticabile" target="_blank" class="social-icon">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+    </header>
+    <main class="project-list">
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>QR_Generator</h3>
+                <p>01 / Python Automation</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="qrcode.jpg" alt="Preview">
+                    <div class="details">
+                        <p>Generatore Python avanzato per QR code personalizzati. Supporta l'inserimento di loghi e la gestione di dati criptati.</p>
+                        <a href="https://pastecode.io/s/n611tch7" target="_blank">SOURCE_CODE //</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>System_Cmd</h3>
+                <p>02 / Utility Tool</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="cmd.jpg" alt="Preview">
+                    <div class="details">
+                        <p>Interfaccia shell personalizzata per automatizzare i compiti di sistema quotidiani con comandi rapidi.</p>
+                        <span>PRIVATE_PROJECT //</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>Pass_Gen</h3>
+                <p>03 / Security</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="passwordgenerator.jpg" alt="Preview">
+                    <div class="details">
+                        <p>Algoritmo di generazione password sicure con interfaccia minimalista in stile terminale.</p>
+                        <a href="https://pastecode.io/s/p91cmno3" target="_blank">SOURCE_CODE //</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>Shop_Bot</h3>
+                <p>04 / Telegram API</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="shopbot.jpg" alt="ShopBot Preview">
+                    <div class="details">
+                        <p>Bot Telegram professionale per la gestione di shop online. Automatizza il redirect degli utenti, la gestione del catalogo e i pagamenti.</p>
+                        <a href="https://pastecode.io/s/7d4jr69v" target="_blank">SOURCE_CODE //</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>Assistant_Bot</h3>
+                <p>05 / Automation</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="bot_tg.jpg" alt="Assistant Preview">
+                    <div class="details">
+                        <p>Assistente multifunzione per Telegram. Gestisce task automatici, moderazione gruppi e notifiche in tempo reale tramite API esterne.</p>
+                        <span>IN_DEVELOPMENT //</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>StudiaFacile</h3>
+                <p>06 / Educational Platform</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="studiafacile.png" alt="StudiaFacile Preview">
+                    <div class="details">
+                        <p>Piattaforma web per la condivisione di risorse accademiche. Permette il download di appunti PDF e materiale didattico organizzato per materie.</p>
+                        <span>WEB_DEVELOPMENT //</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>Bio_Link</h3>
+                <p>07 / UI/UX Design</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="homepagesingolare.png" alt="BioLink Preview">
+                    <div class="details">
+                        <p>Landing page minimale ispirata a Linktree. Un hub centralizzato per i social media con design adattivo e focus sull'estetica dark.</p>
+                        <span>LANDING_PAGE //</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>Gym_System</h3>
+                <p>08 / Management Software</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="gym_system.png" alt="Gym System Preview">
+                    <div class="details">
+                        <p>Gestionale Full-Stack per palestre. Include dashboard amministratore, gestione iscrizioni, rinnovi abbonamenti e database utenti integrato.</p>
+                        <span>PYTHON & SQL //</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-header">
+                <h3>V_Assistant</h3>
+                <p>09 / Telegram Bot & API</p>
+            </div>
+            <div class="project-content">
+                <div class="content-inner">
+                    <img src="v_assistant.png" alt="Assistant Bot Preview">
+                    <div class="details">
+                        <p>Bot Telegram avanzato con gestione promemoria, integrazione API meteo e schedule giornaliera salvata su database.</p>
+                        <span>API_AUTOMATION //</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FOSBA CORPORATION</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
